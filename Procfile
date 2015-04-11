@@ -1,0 +1,1 @@
+web: newrelic-admin run-program gunicorn korkoszeu.wsgi --preload --workers=3 --log-file -

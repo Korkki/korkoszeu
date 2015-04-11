@@ -1,0 +1,10 @@
+Django<1.9
+django-compressor
+django-extensions
+django-toolbelt
+whitenoise
+lxml
+bcrypt
+django-bmemcached
+django-redis-sessions
+newrelic
