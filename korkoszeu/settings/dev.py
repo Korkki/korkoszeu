@@ -28,8 +28,4 @@ CACHES = {
     }
 }
 
-TEMPLATES[0]['OPTIONS']['loaders'] = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-)
 TEMPLATES[0]['OPTIONS']['debug'] = DEBUG
