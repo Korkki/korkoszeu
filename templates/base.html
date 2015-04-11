@@ -1,0 +1,20 @@
+{% load staticfiles compress %}
+<!doctype html>
+<html class="no-js" lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">Używasz <strong>nieaktualnej</strong> przeglądarki. Proszę <a href="http://browsehappy.com/">zaktualizuj ją</a>.</p>
+        <![endif]-->
+        <div>
+        {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>
