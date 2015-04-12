@@ -48,8 +48,12 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'django.contrib.flatpages',
+    'django.contrib.postgres',
     'django_extensions',
     'compressor',
+    'mptt',
+
+    'portfolio',
 )
 
 MIDDLEWARE_CLASSES = (

@@ -8,3 +8,4 @@ bcrypt
 django-bmemcached
 django-redis-sessions
 newrelic
+django-mptt
