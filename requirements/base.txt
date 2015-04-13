@@ -5,10 +5,9 @@ django-toolbelt
 whitenoise
 lxml
 bcrypt
-django-bmemcached
 django-redis-sessions
 newrelic
 django-mptt
 django-admin-bootstrapped
 django-bootstrap3
-python-memcached
+pylibmc
