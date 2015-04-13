@@ -11,3 +11,4 @@ newrelic
 django-mptt
 django-admin-bootstrapped
 django-bootstrap3
+python-memcached
