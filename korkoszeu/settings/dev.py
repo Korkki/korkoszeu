@@ -1,6 +1,6 @@
 from .base import *
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -29,3 +29,7 @@ CACHES = {
 }
 
 TEMPLATES[0]['OPTIONS']['debug'] = DEBUG
+
+COMPRESS = False
+
+DEBUG_TOOLBAR_PATCH_SETTINGS = False

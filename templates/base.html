@@ -1,25 +1,30 @@
-{% load staticfiles compress %}
+{% load staticfiles compress i18n pages %}
 <!doctype html>
 <html class="no-js" lang="pl">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>{% block title %}{% endblock %}</title>
-        <meta name="description" content="">
+        <meta name="description" content="{% block description %}{% endblock %}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
-        {% compress css %}<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}"/>{% endcompress %}
+        {% compress css %}
+            <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}"/>
+            <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}"/>
+            <link rel="stylesheet" type="text/css" href="{% static 'css/cosmo.css' %}"/>
+        {% endcompress %}
     </head>
     <body>
         <!--[if lt IE 8]>
-            <p class="browserupgrade">Używasz <strong>nieaktualnej</strong> przeglądarki. Proszę <a href="http://browsehappy.com/">zaktualizuj ją</a>.</p>
+            <p class="browserupgrade">{% blocktrans %}Używasz <strong>nieaktualnej</strong> przeglądarki. Proszę <a href="http://browsehappy.com/">zaktualizuj ją</a>{% endblocktrans %}.</p>
         <![endif]-->
-        <div>
+        {% main_menu %}
+        <div class="container">
         {% block content %}{% endblock %}
         </div>
         {% compress js %}
-        <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+            <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+            <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
         {% endcompress %}
     </body>
 </html>

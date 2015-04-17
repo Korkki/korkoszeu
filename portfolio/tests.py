@@ -11,7 +11,7 @@ class TechnologyFactory(dj_factory.DjangoModelFactory):
         model = models.Technology
         django_get_or_create = ('name',)
 
-    name = factory.sequence(lambda n: 'name %d' % n)
+    name = factory.Sequence(lambda n: 'name %d' % n)
 
 
 class ProjectFactory(dj_factory.DjangoModelFactory):

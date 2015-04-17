@@ -1,0 +1,35 @@
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as available_languages %}
+{% get_language_info_list for available_languages as langs %}
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">{% trans "Toggle navigation" %}</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'index' %}">Rafał Korkosz</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                {% for page in pages %}
+                    <li><a href="{{ page.get_absolute_url }}">{{ page.title }}</a></li>
+                {% endfor %}
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button">
+                        {{ LANGUAGE_CODE }}
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">{% for lang in langs %}
+                        <li><a href="/{{ lang.code }}/">{{ lang.code }}</a></li>
+                    {% endfor %}</ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

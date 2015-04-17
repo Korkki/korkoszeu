@@ -14,6 +14,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 from django.contrib import messages
 import os
 
+gettext = lambda s: s
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
 
@@ -40,7 +41,7 @@ INTERNAL_IPS = ['127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = (
-    'django_admin_bootstrapped',
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,13 +50,13 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.sitemaps',
-    'django.contrib.flatpages',
     'django.contrib.postgres',
     'django_extensions',
     'compressor',
     'mptt',
 
     'portfolio',
+    'pages',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -68,7 +69,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.middleware.locale.LocaleMiddleware',
-    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
 ROOT_URLCONF = 'korkoszeu.urls'
@@ -121,8 +121,8 @@ USE_L10N = True
 USE_TZ = True
 
 LANGUAGES = [
-    ('pl', 'Polish'),
-    ('en', 'English'),
+    ('pl', gettext('Polish')),
+    ('en', gettext('English')),
 ]
 
 USE_ETAGS = True
