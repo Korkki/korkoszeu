@@ -26,3 +26,5 @@ SESSION_REDIS_PORT = redis_url.port
 SESSION_REDIS_DB = 0
 SESSION_REDIS_PASSWORD = redis_url.password
 SESSION_REDIS_PREFIX = 'session'
+
+COMPRESS_ENABLED = True

@@ -163,6 +163,8 @@ COMPRESS_CSS_FILTERS = (
 
 COMPRESS_PARSER = 'compressor.parser.LxmlParser'
 
+COMPRESS_ROOT = STATIC_ROOT
+
 # passwords
 
 PASSWORD_HASHERS = (
