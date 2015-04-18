@@ -9,7 +9,7 @@ ALLOWED_HOSTS = ['*']
 
 CACHES = {
     'default': {
-        'BACKEND': 'django_bmemcached.memcached.BMemcached',
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
         'LOCATION': os.environ.get('MEMCACHEDCLOUD_SERVERS').split(','),
         'OPTIONS': {
             'username': os.environ.get('MEMCACHEDCLOUD_USERNAME'),

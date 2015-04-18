@@ -9,7 +9,5 @@ django-redis-sessions
 newrelic
 django-mptt
 django-bootstrap3
-pylibmc
 django-modeltranslation
-https://github.com/jaysonsantos/django-bmemcached/archive/master.zip
-python-binary-memcached
+python-memcached
