@@ -11,3 +11,4 @@ django-mptt
 django-bootstrap3
 pylibmc
 django-modeltranslation
+django-bmemcached
