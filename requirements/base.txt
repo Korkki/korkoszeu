@@ -10,4 +10,4 @@ newrelic
 django-mptt
 django-bootstrap3
 django-modeltranslation
-python-memcached
+python3-memcached
